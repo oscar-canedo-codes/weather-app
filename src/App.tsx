@@ -8,7 +8,9 @@ const App = (): JSX.Element => {
       `http://api.openweathermap.org/geo/1.0/direct?q=${value.trim()}&limit=5&appid=${
         process.env.REACT_APP_API_KEY
       }`
-    ).then(res => res.json()).then(data => console.log({ data }))
+    )
+      .then((res) => res.json())
+      .then((data) => console.log({ data }))
   }
 
   const onInputChange = (e: ChangeEvent<HTMLInputElement>) => {
